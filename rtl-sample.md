@@ -3,7 +3,6 @@ layout: post-rtl
 title: لیست کتاب ها 
 permalink: /rtl/
 ---
-یست کتاب
 
 ۱-	آخرین سخنرانی – راندی پاش
 
