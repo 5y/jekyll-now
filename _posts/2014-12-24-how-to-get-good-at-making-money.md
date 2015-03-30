@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How To Get Good At Making Money.
+title:  How To Get Good At Making Money.gh-page
 ---
 I got FileMaker Pro (I paid for it with the stash I’d saved up selling stuff to my friends) and started messing 
 around. After a few months, I had solved the problems I had with organizing my music. I knew what music I had, 
