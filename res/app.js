@@ -56,73 +56,73 @@ d3.json('data/visualization_ids.json', function (error, sessionList) {
 
 var prevStroke, prevFill, prevFillOpa, prevStrokeOpa, prevTextFill;
 
-
-/***** Linear Glyph ********/
-function emptyIntemediateDiv()
-{
-    $('#intermediate_action_analysis_svg').empty();
-    $('#intermediate_action_analysis_1_svg').empty();
-}
-
-function intermediate_state_representation(id){
-    emptyIntemediateDiv()
-    intermediate_svg=d3.select("#intermediate_action_analysis_svg")
-                    .append("svg")
-                    .attr("width","25000px")
-                    .attr("height", "200px")
-
-    // edited
-    x_axis_circle=40
-    y_axis_circle=40
-    radius_snapshot=20
-    radius_other=10
-    line_length=25
-    radius = 10
-
-    var color_mapper = {
-        "Confusion":"#0048BA",
-        "Conflict":"#B0BF1A",
-        "Acquiring information":"#7CB9E8",
-        "Emotional Reaction":"#C0E8D5",
-        "Reactive Conflict Management":"#B284BE",
-        "Excitement":"#E52B50",
-        "Encouragement":"#F19CBB",
-        "BOT Command/Sending Information":"#D0FF14",
-        "Mutual Monitoring":"#4B5320",
-        "Back-up Behavior":"#000000",
-        "Cue Recognition":"#8A2BE2",
-        "Coordination":"#FFAA1D",
-        "BOT Command/Getting Information":"#E30022",
-        "Thanks":"#5F9EA0",
-        "Meaning Ascription":"#7FFF00",
-        "Awareness":"#6495ED",
-        "Aquiring Information":"#EEDC82",
-    }
-
-
-
-    for(var j=0;j<chat_data[id].length;j++){
-        var group=intermediate_svg.append('g')
-            group.append('circle')
-            .attr('cx', x_axis_circle)
-            .attr('cy', y_axis_circle)
-            .attr('r', radius)
-            .attr('stroke', 'black')
-            .attr('fill', color_mapper[chat_data[id][j]['discord_data']])
-            group.append('line')
-            .attr('x1', x_axis_circle+radius)
-            .attr('y1', y_axis_circle)
-            .attr('x2', x_axis_circle+radius+line_length)
-            .attr('y2', y_axis_circle)
-            .attr('stroke', 'red');
-
-            x_axis_circle+=2*radius_other+line_length
-
-    }
-
-
-
-    }
+//
+// /***** Linear Glyph ********/
+// function emptyIntemediateDiv()
+// {
+//     $('#intermediate_action_analysis_svg').empty();
+//     $('#intermediate_action_analysis_1_svg').empty();
+// }
+//
+// function intermediate_state_representation(id){
+//     emptyIntemediateDiv()
+//     intermediate_svg=d3.select("#intermediate_action_analysis_svg")
+//                     .append("svg")
+//                     .attr("width","25000px")
+//                     .attr("height", "200px")
+//
+//     // edited
+//     x_axis_circle=40
+//     y_axis_circle=40
+//     radius_snapshot=20
+//     radius_other=10
+//     line_length=25
+//     radius = 10
+//
+//     var color_mapper = {
+//         "Confusion":"#0048BA",
+//         "Conflict":"#B0BF1A",
+//         "Acquiring information":"#7CB9E8",
+//         "Emotional Reaction":"#C0E8D5",
+//         "Reactive Conflict Management":"#B284BE",
+//         "Excitement":"#E52B50",
+//         "Encouragement":"#F19CBB",
+//         "BOT Command/Sending Information":"#D0FF14",
+//         "Mutual Monitoring":"#4B5320",
+//         "Back-up Behavior":"#000000",
+//         "Cue Recognition":"#8A2BE2",
+//         "Coordination":"#FFAA1D",
+//         "BOT Command/Getting Information":"#E30022",
+//         "Thanks":"#5F9EA0",
+//         "Meaning Ascription":"#7FFF00",
+//         "Awareness":"#6495ED",
+//         "Aquiring Information":"#EEDC82",
+//     }
+//
+//
+//
+//     for(var j=0;j<chat_data[id].length;j++){
+//         var group=intermediate_svg.append('g')
+//             group.append('circle')
+//             .attr('cx', x_axis_circle)
+//             .attr('cy', y_axis_circle)
+//             .attr('r', radius)
+//             .attr('stroke', 'black')
+//             .attr('fill', color_mapper[chat_data[id][j]['discord_data']])
+//             group.append('line')
+//             .attr('x1', x_axis_circle+radius)
+//             .attr('y1', y_axis_circle)
+//             .attr('x2', x_axis_circle+radius+line_length)
+//             .attr('y2', y_axis_circle)
+//             .attr('stroke', 'red');
+//
+//             x_axis_circle+=2*radius_other+line_length
+//
+//     }
+//
+//
+//
+//     }
 
 
 /******************** State graph **********************************/
