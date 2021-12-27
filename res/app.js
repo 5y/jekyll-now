@@ -134,7 +134,7 @@ var stateforce = d3.layout.force()
     .on("tick", statetick);
 
 svg = d3.select("#state-graph-svg")
-    .attr("width", stateWidth)
+    .attr("width", 4000)
     .attr("height", stateHeight)
     .attr("pointer-events", "all")
     .call(d3.behavior.zoom().on("zoom", stateZoomPan))
